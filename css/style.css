@@ -1,0 +1,95 @@
+/* NORMAL */
+
+body {
+    display: grid;
+    gap:3px;
+
+    
+    
+}
+
+nav {
+    grid-area: nv;
+    background-color: hotpink;
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 70px 20px;
+
+    grid-template-areas: 
+    "lg sl"
+    "bt bt"
+    ;
+
+
+    /* align-items: start; */
+}
+#logo {
+    grid-area: lg;
+    height: 100%;
+    
+
+}
+
+#selectable {
+    grid-area: sl;
+    display: flex;
+    justify-content: end;
+    align-content;
+    padding:5px;
+    gap: 10px;
+}
+
+#selectable * {
+    height: 100%;
+}
+section {
+    grid-area: sc;
+    background-color: blue;
+}
+aside {
+    grid-area: as;
+    background-color: green;
+}
+main {
+    grid-area: mn;
+    background-color: orange;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 5px; */
+    
+}
+footer {
+    grid-area: ft;
+    background-color: brown;
+}
+
+article {
+    margin:0px;
+    padding: px;
+    background-image:linear-gradient(140deg, rgb(113, 113, 240) ,rgb(0, 0, 145));
+    width:25%;
+    height: 400px;
+}
+
+/* PHONE */
+@media screen and (max-width:500px) {
+    
+    
+}
+
+/* COMPUTER */
+@media screen and (min-width:500px) {
+    body {
+        grid-template-areas: 
+        "nv nv"
+        "sc as"
+        "mn as"
+        "ft ft"
+        ;   
+
+        grid-template-columns: 1fr 15vw;
+        grid-template-rows: 100px 50px 800px 150px;
+}
+
+}
