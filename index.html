@@ -40,27 +40,27 @@
 
     <h3 class="filters" id="stars">Minimum stars: 0</h3>
     <div class="slidecontainer">
-      <input type="range" min="0" max="5" step="0.5" value="50" class="slider" id="starsSlider">
+      <input type="range" min="0" max="5" step="0.5" value="0" class="slider" id="starsSlider">
     </div>
 
-    <h3 class="filters" id="minPrice">Minium price:</h3>
+    <h3 class="filters" id="minPrice">Minium price: 50kr</h3>
     <div class="slidecontainer">
       <input type="range" min="100" max="10000" step="100" value="50" class="slider" id="minPriceSlider">
     </div>
 
-    <h3 class="filters">Maximum price:</h3>
+    <h3 class="filters" id="maxPrice">Maximum price: 50kr</h3>
     <div class="slidecontainer">
-      <input type="range" min="100" max="10000" value="50" class="slider" id="maxPrice">
+      <input type="range" min="100" max="10000" step="100" value="50" class="slider" id="maxPriceSlider">
     </div>
     
-    <h3 class="filters">MaxWidth:</h3>
+    <h3 class="filters" id="maxWidth">MaxWidth: 50cm</h3>
     <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <input type="range" min="1" max="100" step="1" value="50" class="slider" id="maxWidthSlider">
     </div>
 
-    <h3 class="filters">MaxLength:</h3>
+    <h3 class="filters" id="maxLength">MaxLength: 50cm</h3>
     <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <input type="range" min="1" max="100" step="1" value="50" class="slider" id="maxLengthSlider">
     </div>
     
   </aside>
@@ -69,13 +69,19 @@
 
   </div>  
 
-  <main>
+  <main id="main">
+  </main>
 
+  <footer></footer>
+  <script src="js/javascript.js"></script> 
+</body>
+</html>
+
+<!-- 
     <article class="product">
       <img class="display" src="img/vattenpass/vpass-1.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://commons.wikimedia.org/wiki/File:Vpass-1.JPG">Svjo</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -83,13 +89,17 @@
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star-half.png" alt="">
         </div>
-      </div>
+      
       <li class="galindo-regular">
         <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
         <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
         <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
       </li>
       <h2 class="galindo-regular">999.-</h2>
+      <div >
+        <img class="addcart" src="img/addcart.png" alt="">
+        <img class="circle" src="img/circle.png" alt="">
+      </div>
       
     </article>
 
@@ -97,7 +107,6 @@
       <img class="display" src="img/vattenpass/vpass-2.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280810/">Walter Bichler</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -119,7 +128,6 @@
       <img class="display" src="img/vattenpass/vpass-3.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280811/">Walter Bichler</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -141,7 +149,6 @@
       <img class="display" src="img/vattenpass/vpass-4.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://pixabay.com/photos/craft-spirit-level-miniature-figures-3838891/">Wilfried Pohnke</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -163,7 +170,6 @@
       <img class="display" src="img/vattenpass/vpass-5.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://www.pexels.com/photo/bearded-man-holding-a-yellow-spirit-level-8482816/">Thirdman</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -185,7 +191,6 @@
       <img class="display" src="img/vattenpass/vpass-6.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://www.pexels.com/photo/person-holding-a-spirit-level-8488008/">Kindel Media</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -207,7 +212,6 @@
       <img class="display" src="img/vattenpass/vpass-7.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://www.pexels.com/photo/an-engineer-holding-a-spirit-level-against-a-wall-8482824/">Thirdman</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -229,7 +233,6 @@
       <img class="display" src="img/vattenpass/vpass-8.JPG" alt="">
       <h6 class="galindo-regular credit">Author <a class="credit" href="https://unsplash.com/photos/white-spirit-level-on-brown-table-_qpY2jqedwU">Louis Hansel</a></h6>
       <h1 class="galindo-regular">Vattenpass</h1>
-      <div class="Rating">
         <div class="fullstar">
           <img class="fullstar" src="img/star.png" alt="">
           <img class="fullstar" src="img/star.png" alt="">
@@ -245,7 +248,7 @@
       </li>
       <h2 class="galindo-regular">999.-</h2>
       
-    </article>
+    </article> -->
 
     <!-- <article class="product"></article>
     <article class="product"></article>
@@ -254,9 +257,3 @@
     <article class="product"></article>
     <article class="product"></article>
     <article class="product"></article> -->
-  </main>
-
-  <footer></footer>
-  <script src="js/javascript.js"></script> 
-</body>
-</html>
