@@ -3,35 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tangentens Lutning</title>
   <link rel="stylesheet" href="css/style.css">
-  <title>Test1</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Galindo&display=swap');
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 </head>
-<body>
-
-
-  <!-- Fluorsdörss Floors & Doors -->
+<body id="home">
   <!-- Tangentens lutning (vattenpass) -->
+
   <nav>
 
     <img id="logo" src="img/loga.png" alt="">
     <div id="selectable">
-      <img id="cart" src="img/cart.png" alt="">
-      <img id="menu-button" src="img/menu.png" alt="">
+      <a href="cart.html">
+        <img id="cart" src="img/cart.png" alt="Cart">
+      </a>
+      <img id="menu-button" aria-label="Menu" aria-expanded="false" aria-controls="menu" src="img/menu.png" alt="Menu">
     </div>
     
   </nav>
 
   <section>
-    <div id="container">
-      <button type="button"><b>Our Shops</b></button>
-      <button type="button">Button2</button>
-      <button type="button">Button3</button>
-      <button type="button">Button4</button>
+    <div id="container" >
+      <button type="button"><b>Find us!</b></button>
+      <button type="button"><b>Contact us!</b></button>
+      <button type="button"><b>Why us?</b></button>
+      <button type="button"><b>Deals!</b></button>
     </div>
   </section>
 
@@ -40,220 +40,55 @@
 
     <h3 class="filters" id="stars">Minimum stars: 0</h3>
     <div class="slidecontainer">
+      <label for="Adjust minimun stars" aria-label="Adjust minimun stars">
       <input type="range" min="0" max="5" step="0.5" value="0" class="slider" id="starsSlider">
+      </label>
     </div>
 
     <h3 class="filters" id="minPrice">Minium price: 50kr</h3>
     <div class="slidecontainer">
+      <label for="Adjust minimun price"aria-label="Adjust minimun stars">
       <input type="range" min="100" max="10000" step="100" value="50" class="slider" id="minPriceSlider">
+      </label>
     </div>
 
     <h3 class="filters" id="maxPrice">Maximum price: 50kr</h3>
     <div class="slidecontainer">
+      <label for="Adjust maximum price" aria-label="Adjust minimun stars">
       <input type="range" min="100" max="10000" step="100" value="50" class="slider" id="maxPriceSlider">
+      </label>
     </div>
     
     <h3 class="filters" id="maxWidth">MaxWidth: 50cm</h3>
     <div class="slidecontainer">
+      <label for="Adjust max width" aria-label="Adjust minimun stars">
       <input type="range" min="1" max="100" step="1" value="50" class="slider" id="maxWidthSlider">
+      </label>
     </div>
 
     <h3 class="filters" id="maxLength">MaxLength: 50cm</h3>
     <div class="slidecontainer">
+      <label for="Adjust max length" aria-label="Adjust minimun stars">
       <input type="range" min="1" max="100" step="1" value="50" class="slider" id="maxLengthSlider">
+    </label>
     </div>
     
   </aside>
-  <div id="menu">
-    <img id="close-menu" src="img/close.png" alt="">
+  <nav id="menu">
+    <img id="close-menu" src="img/close.png" alt="Close menu">
 
-  </div>  
+  </nav>  
 
   <main id="main">
   </main>
 
-  <footer></footer>
-  <script src="js/javascript.js"></script> 
+  <footer>
+    <h6 class="fineprint galindo-regular"> * By using this website, you agree that you are at least 47% made of water.</h6>
+    <h6 class="fineprint galindo-regular"> * By continuing, you confirm that you could leave at any time, but choose not to. Why?</h6>
+    <h6 class="fineprint galindo-regular"> * You agree not to hold us accountable for any existential crises triggered by scrolling too far.</h6>
+    <h6 class="fineprint galindo-regular"> * If something breaks, try turning your expectations off and on again.</h6>
+    <h6 class="fineprint galindo-regular"> * In case of emergency, please remain calm and pretend this is intentional.</h6>
+  </footer>
+  <script src="js/script1.js"></script> 
 </body>
 </html>
-
-<!-- 
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-1.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://commons.wikimedia.org/wiki/File:Vpass-1.JPG">Svjo</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      <div >
-        <img class="addcart" src="img/addcart.png" alt="">
-        <img class="circle" src="img/circle.png" alt="">
-      </div>
-      
-    </article>
-
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-2.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280810/">Walter Bichler</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      </div>
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      
-    </article>
-
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-3.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280811/">Walter Bichler</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      </div>
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      
-    </article>
-
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-4.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://pixabay.com/photos/craft-spirit-level-miniature-figures-3838891/">Wilfried Pohnke</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      </div>
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      
-    </article>
-
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-5.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://www.pexels.com/photo/bearded-man-holding-a-yellow-spirit-level-8482816/">Thirdman</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      </div>
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      
-    </article>
-
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-6.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://www.pexels.com/photo/person-holding-a-spirit-level-8488008/">Kindel Media</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      </div>
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      
-    </article>
-
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-7.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://www.pexels.com/photo/an-engineer-holding-a-spirit-level-against-a-wall-8482824/">Thirdman</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      </div>
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      
-    </article>
-
-    <article class="product">
-      <img class="display" src="img/vattenpass/vpass-8.JPG" alt="">
-      <h6 class="galindo-regular credit">Author <a class="credit" href="https://unsplash.com/photos/white-spirit-level-on-brown-table-_qpY2jqedwU">Louis Hansel</a></h6>
-      <h1 class="galindo-regular">Vattenpass</h1>
-        <div class="fullstar">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star.png" alt="">
-          <img class="fullstar" src="img/star-half.png" alt="">
-        </div>
-      </div>
-      <li class="galindo-regular">
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 1</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 2</ul>
-        <ul><img class="listarrow" src="img/listarrow.png" alt="">thing 3</ul>
-      </li>
-      <h2 class="galindo-regular">999.-</h2>
-      
-    </article> -->
-
-    <!-- <article class="product"></article>
-    <article class="product"></article>
-    <article class="product"></article>
-    <article class="product"></article>
-    <article class="product"></article>
-    <article class="product"></article>
-    <article class="product"></article> -->
