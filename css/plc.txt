@@ -1,0 +1,674 @@
+/* VARIABLES */
+:root {
+    --navcolor:white;
+    --itemfade1:rgb(80, 80, 80);
+    --itemfade2:rgb(174, 173, 173);
+
+    --bodycolor:rgb(183, 179, 179);
+}
+/* NORMAL */
+
+body {
+    display: grid;
+    gap:0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--bodycolor);
+    overflow-x: hidden;
+
+}
+
+nav {
+    grid-area: nv;
+    background-color: var(--navcolor);
+    display: grid;
+    
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 80px 20px;
+
+    grid-template-areas: 
+    "lg sl"
+    ;
+    
+}
+
+
+#selectable {
+    grid-area: sl;
+    display: flex;
+    justify-content: end;
+    
+    padding:5px;
+    gap: 10px;
+   
+}
+
+section {
+    grid-area: sc;
+    background-color: blue;
+    padding: 15px;
+}
+aside {
+    grid-area: as;
+    background-color: rgb(255, 255, 255);
+}
+main {
+    grid-area: mn;
+    background-color: var(--bodycolor);
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+footer {
+    grid-area: ft;
+    background-color: rgb(168, 167, 167)
+}
+
+#selectable img {
+    z-index: 2;
+    height: 80%;
+    gap:10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    
+}
+#selectable a img {
+    z-index: 2;
+    height: 80%;
+    gap:10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    
+}
+
+button:hover{
+    background-color: black;
+}
+
+
+#filter {
+    color: black;
+    margin-left: 20px;
+}
+.filters {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.slidecontainer {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.slider {
+    width: 100%;
+    
+}
+
+.addcart {
+    position:relative;
+    z-index: 2;
+    left: 75%;
+    
+    top:-76px;
+    width: 45px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.listarrow {
+    height: 10px;
+    width: 10px;
+}
+
+
+
+
+.product * {
+    
+    margin: 0;
+
+}
+.credit {
+    /* margin-left: 5px; */
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    text-shadow:
+        -0.5px -0.5px 0 #ffffff,
+        0.5px -0.5px 0 #ffffff,
+        -0.5px  0.5px 0 #ffffff,
+        0.5px  0.5px 0 #ffffff;
+        
+}
+
+.galindo-regular {
+  font-family: "Galindo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.fullstar {
+    display: flex;
+    margin-left: 2px;
+    width: 20px;
+    
+    margin-left: 3px;
+    
+    
+    background-position: center;
+}
+#menu-button{
+    cursor: pointer;
+}
+#cart {
+    cursor: pointer;
+}
+.cartProduct * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cartProduct {
+    background-image:linear-gradient(140deg, var(--itemfade1) ,var(--itemfade2));
+    height: 100px;
+    width: 100%;
+    padding: 0px;
+    border-radius: 3px;
+    margin: 0px;
+
+}
+.cartProduct .display{
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#checkout {
+    background-image:linear-gradient(140deg, var(--itemfade1) ,var(--itemfade2));
+    height: 30px;
+    width: 100%;    
+    padding: 0px;
+    border-radius: 3px;
+    justify-self:flex-end;
+    
+    }
+#cartPage {
+    gap:0px;
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px black,
+                10px -10px 15px black,
+                -10px 10px 15px black,
+                -10px -10px 15px black;
+    
+}
+.product h2{
+    position: relative;
+    /* top:-15px; */
+    margin-top: -66px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    transition: all 0.2s;
+    font-size: 37px;
+}
+.removeFromCart * {
+    cursor: pointer;
+}
+#checkout h2 {
+        position: relative;
+        top: -20px;
+    }
+
+#back {
+    grid-area:bk;
+}
+.fineprint {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+
+/* PHONE */
+@media screen and (max-width:500px) {
+    #home {
+
+        grid-template-areas: 
+        "nv"
+        "sc"
+        "mn"
+        "ft"
+        ;   
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 100px auto auto;
+    
+        
+    }
+    #cartPageBody {
+        background-color: white;
+        grid-template-areas: 
+        "bk"
+        "mn"
+        ;
+
+        grid-template-rows:50px minmax(100vh,min-content);
+    
+    }
+    #menu {
+        position: fixed;
+        z-index: 3;
+        background-color: rgb(213, 212, 212);
+        width: 70vw;
+        left: 140vw;
+        height: 100vh;
+        transition: left 0.4s; 
+        display: flex;
+        
+    }
+    .show {
+        /* Använder detta på grund av att visa menyn och måste alltså overpowera dens orginella position */
+        left:30vw !important;  
+    }
+    button {
+        max-width: 150px;
+        width: 50%;
+        margin:0 0 2px 0px;
+        box-shadow: 2px 2px 5px black;
+    }
+    #back {
+        
+    background-color: var(--bodycolor);
+    z-index: 2;
+
+    }
+
+    #back * {
+        height: 100%;
+    }
+
+    #logo {
+        
+        grid-area: lg;
+        
+        max-height: min-content;
+        margin: auto 0;
+        margin-left:10px;
+        
+        
+    }
+    aside * {
+        opacity: 0%;
+
+    }
+    aside {
+        opacity: 0%;
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        top:0px;
+        left:0px;
+
+    }
+
+    .product {
+        position: relative;
+        box-shadow:2px 2px 5px black, -2px -2px 5px black ;
+        transition: transform 0.2s ease;
+        
+        margin:0px;
+        padding: 0px;
+        background-image:linear-gradient(140deg, var(--itemfade1) ,var(--itemfade2));
+      
+        width:100%;
+        height: 200px;
+        
+    }
+     .display {
+        
+        height: 40%;
+        
+    }       
+    .display {
+        height: 100%;
+        width: 40%;
+        object-fit:cover;
+        transition: height 0.2s;
+    }
+    h1 {
+        overflow: scroll;
+        
+        font-size: 27px;
+    }
+    .product h1{
+        position: relative;
+        left:42%;
+        top:-105%;
+        width: 49%;
+    }
+    .product h6 {
+        position: relative;
+        top:-20px;
+        margin-left: 12px;
+    /* left:5px; */
+    }
+    .addToCart{
+        width:60px;
+    }
+    
+    .fullstar{
+        position: relative;
+        left: 38%;
+        top:-108%;
+    }
+    .product h2{
+        top: -71%;
+        left: 40%;
+        width: 48%;
+    }
+    #close-menu {
+        width:50px;
+        height: 50px;
+        position: relative;
+        right: -200px;
+        cursor: pointer;
+        z-index: 3;
+        
+    }
+    .addToCart {
+        position: relative;
+        top: -59%;
+        left:69%;
+        width: 60px;
+        height: 60px;
+    }
+    .circle {
+        position: relative;
+        left: 46%;
+        top:-144px;
+        
+        width: 80px;
+        transition: all 0.1s;
+        opacity: 2%;
+        cursor: pointer;
+
+    }
+    li {
+        position: relative;
+        top:-106%;
+        left:32%;
+        list-style: none;
+        width: 69%;
+    
+    }
+    .cartProduct h6 {
+        position: relative;
+
+        top:-35px;
+        margin-left: 5px;
+        width: 18%;
+        height: 32px;
+        overflow: hidden;
+        
+    }
+    .cartProduct h1 {
+        position: relative;
+        left:27%;
+        top:-130px;
+        width: 73%;
+    }
+    .cartProduct .fullstar {
+        position: relative;
+        top: -69px;
+        left:23%;
+    }
+    .cartProduct h2 {
+        position: relative;
+        top: -185px;
+        left:27%;
+        width: 50%;
+        
+    }
+    .removeFromCart {
+   
+        position: relative;
+        top:-136px;
+        left: 82%;
+        width: 40px;
+        height: 60px;
+    }
+    .remove {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+
+    }
+    .Ccircle {
+        position: relative;
+        top: -45px;
+        left:-2px;
+        width: 110%;
+        opacity: 10%;
+
+    }
+    
+
+}
+
+
+
+
+
+/* COMPUTER */
+@media screen and (min-width:500px) {
+    #home {
+        grid-template-areas: 
+        "nv nv nv"
+        "sc sc sc"
+        "ed mn as"
+        "ed ft ft"
+        ;   
+
+        grid-template-columns: 15px 1fr 25vw;
+        grid-template-rows: 80px 50px min-content auto;
+    }
+    #cartPageBody {
+        background-color: white;
+        grid-template-areas: 
+        "tl tt tr"
+        "tl mn tr"
+        "tl tb tr"
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px minmax(500px,auto) 50px;
+    }
+    #back * {
+        opacity: 0%;
+        z-index: 2;
+
+    }
+
+    #logo {
+
+        grid-area: lg;
+  
+        max-height: min-content;
+        margin: auto 0;
+        margin-left:20px;
+        height: 100%;
+     
+    
+    }
+    button {
+        max-width: 150px;
+        width: 23%;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    #menu {
+        position: fixed;
+        z-index: 2;
+        background-color: rgb(213, 212, 212);
+        width: 20vw;
+        left: 100vw;
+        height: 100vh;
+        transition: left 0.4s;
+        
+    }
+    .show {
+        /* Använder detta på grund av att visa menyn och måste alltså overpowera dens orginella position */
+        left:80vw !important; 
+    }
+    .product {
+        
+
+        box-shadow:2px 2px 5px black, -2px -2px 5px black ;
+        transition: transform 0.2s ease;
+        
+        margin:0px;
+        padding: 0px;
+        background-image:linear-gradient(140deg, var(--itemfade1) ,var(--itemfade2));
+        
+        width:25%;
+        height: 400px;
+        
+    }
+    .product li{
+        opacity: 0%;
+     
+        
+        transition:all 0.1s, margin-left 0.1s;
+        list-style: none;
+    }
+    
+    
+    .display {
+    height: 60%;
+    width: 100%;
+    object-fit:cover;
+    transition: height 0.2s;
+    }
+    .product:hover .display {
+        height: 50%;
+    }
+    .product h6 {
+        position: relative;
+        top:-20px;
+        margin-left: 5px;
+        
+    }
+    .cartProduct h6 {
+        position: relative;
+       
+        top:-35px;
+        margin-left: 5px;
+        width: 18%;
+        height: 32px;
+        overflow: hidden;
+        
+    }
+    .cartProduct h1 {
+        position: relative;
+        left:27%;
+        top:-130px;
+        width: 48%;
+    }
+    h1 {
+        margin-left: 5px;
+        font-size: 25px;
+    }
+    .remove {
+        position: relative;
+        z-index: 2;
+        width: 60px;
+        
+    }
+    .Ccircle {
+        position: relative;
+        top: -66px;
+        left:-4px;
+        width: 110%;
+        opacity: 10%;
+
+    }
+    .cartProduct .fullstar {
+        position: relative;
+        top: -69px;
+        left:25%;
+    }
+    .cartProduct h2 {
+        position: relative;
+        top: -200px;
+        left:27%;
+        width: 50%;
+    }
+
+    .removeFromCart {
+    
+        position: relative;
+        top:-160px;
+        left: 82%;
+        width: 60px;
+        height: 60px;
+    }
+    .circle {
+    position: relative;
+    left: 51%;
+    top:-62px;
+    
+    width: 80px;
+    transition: all 0.1s;
+    opacity: 2%;
+    cursor: pointer;
+    
+ 
+ }
+    
+    .product:hover {
+        transform: scale(1.03);
+        background-image:linear-gradient(140deg, var(--bodycolor) ,var(--bodycolor));
+
+    }
+    .product:hover .addcart {
+        top:-98px;
+        
+    }
+    .product:hover li {
+        margin-top: 3px;
+        opacity: 100%;
+        margin-left: -25px;
+    }
+    .product:hover h2 {
+    
+        margin-top: 0px;
+    }
+    .product:hover .circle{
+        top:-85px;
+        opacity: 24%;
+        
+    }
+   
+
+    #close-menu {
+    width:50px;
+    height: 50px;
+    position: relative;
+    right: -240px;
+    cursor: pointer;
+    z-index: 4;
+    
+}
+
+}
