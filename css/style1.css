@@ -1,18 +1,29 @@
+:root {
+    --bgcolor: rgb(227, 227, 227);
+    --nvcolor: rgb(255, 255, 255);
+    --bncolor: rgb(34, 2, 115);
+    --prcolor:white;
+    
+}
 #home {
     display: grid;
     grid-template-areas: 
-    "nv nv nv"
-    "sc sc sc"
-    "ed mn as"
-    "ed ft ft"
+    "nv nv"
+    "bn bn"
+    "mn as"
+    "ft ft"
     ;
-    grid-template-columns: 15px 1fr 25vw;
-    grid-template-rows: 90px 50px min-content auto;  
+    grid-template-columns: 1fr 25vw;
+    grid-template-rows: 90px 70px min-content auto;  
     gap:0px;
     margin: 0px;
+    background-color: var(--bgcolor);
 }
+
+
+/*/////// NAV ///////*/
 nav {
-    background-color: blue;
+    background-color: var(--nvcolor);
     
     grid-area: nv;
     display: grid;
@@ -24,11 +35,15 @@ nav {
 
     
 }
+
 #logo {
     grid-area:lg;
-    height: 100%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 20px;
 }
+
 #selectable {
     grid-area: sl;
     display: flex;
@@ -78,4 +93,102 @@ nav {
 #menu-button {
     height: 70%;
     margin: auto;
+}
+/* /////Banner */
+#banner {
+    grid-area: bn;
+    background-color:var(--bncolor);
+}
+main {
+    grid-area: mn;
+    display: flex;
+
+}
+/* ///// Product ///// */
+.product {
+    margin-left: 15px;
+    margin-top: 15px;
+
+    width: 25%;
+    height: 400px;
+
+    background-color:rgb(249, 249, 249);
+    border-radius: 10px;
+
+    box-shadow:
+        2px 2px 5px rgb(135, 135, 135),
+        -2px -2px 5px rgb(135, 135, 135),
+        -2px 2px 5px rgb(135, 135, 135),
+        2px -2px 5px rgb(135, 135, 135);
+    /* outline: red solid; */
+    
+}
+.display {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+.credit {
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    color:rgb(90, 90, 90);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.prname {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+.stars {
+    margin-left: 15px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    height: 20px;
+}
+.stars * {
+    height: 100%;
+}
+
+li {
+    opacity: 0%;
+    list-style: none;
+    
+}
+
+.price {
+    margin-left: 15px;
+    margin-top: -120px;
+    margin-bottom: 0px;
+
+    font-size:32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.addToCart {
+    margin-left: 67%; 
+    margin-top: -50px;
+    margin-bottom: 0px;
+}
+
+.addcart {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+
+    border-radius: 10px;
+    box-shadow:
+        1px 1px 2px rgb(135, 135, 135),
+        -1px -1px 2px rgb(135, 135, 135),
+        -1px 1px 2px rgb(135, 135, 135),
+        1px -1px 2px rgb(135, 135, 135);
 }
