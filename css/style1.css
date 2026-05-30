@@ -3,6 +3,7 @@
     --nvcolor: rgb(255, 255, 255);
     --bncolor: rgb(34, 2, 115);
     --prcolor:white;
+    --prtextcolor:rgb(21, 3, 71);
     
 }
 #home {
@@ -146,6 +147,7 @@ main {
     margin-top: 0px;
     margin-bottom: 0px;
 
+    color: var(--prtextcolor);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
 }
@@ -153,12 +155,30 @@ main {
     margin-left: 15px;
     margin-top: 2px;
     margin-bottom: 0px;
+
     height: 20px;
+    
+    padding:0px;
+
+    display: flex;
 }
 .stars * {
+    
     height: 100%;
 }
+.ratings {
+    
+    margin-left: 5px;
+    margin-top: 3px;
+    /* margin-bottom: auto; */
+    
 
+
+    font-size: 13px;
+    color:rgb(90, 90, 90);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
 li {
     opacity: 0%;
     list-style: none;
@@ -170,6 +190,7 @@ li {
     margin-top: -120px;
     margin-bottom: 0px;
 
+    color: var(--prtextcolor);
     font-size:32px;
     font-family: Arial, Helvetica, sans-serif;
 }
