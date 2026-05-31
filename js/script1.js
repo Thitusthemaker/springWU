@@ -1,5 +1,6 @@
-var menubutton = document.getElementById("menu-button").addEventListener("click",toggleMenu)
-var closebutton = document.getElementById("close-menu").addEventListener("click",toggleMenu)
+
+// var menubutton = document.getElementById("menu-button").addEventListener("click",toggleMenu)
+// var closebutton = document.getElementById("close-menu").addEventListener("click",toggleMenu)
 
 var starslider = document.getElementById("starsSlider")
 const stars = document.getElementById("stars")
@@ -120,8 +121,8 @@ let products = [
 ]
 
 function toggleMenu(){
-  alert("huh")
-  let menu = document.getElementById("menu-button")
+  console.log("menu click")
+  let menu = document.getElementById("menu")
   menu.classList.toggle("show")
 }
 
