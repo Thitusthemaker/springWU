@@ -1,7 +1,5 @@
-var menubutton = document.querySelector("#menu-button").addEventListener("click",toggleMenu)
-var closebutton = document.querySelector("#close-menu").addEventListener("click",toggleMenu)
-
-
+var menubutton = document.getElementById("menu-button").addEventListener("click",toggleMenu)
+var closebutton = document.getElementById("close-menu").addEventListener("click",toggleMenu)
 
 var starslider = document.getElementById("starsSlider")
 const stars = document.getElementById("stars")
@@ -18,6 +16,8 @@ const maxWidth = document.getElementById("maxWidth")
 var maxLengthSlider = document.getElementById("maxLengthSlider")
 const maxLength = document.getElementById("maxLength")
 
+var clearAll = document.getElementById("clearFilters").addEventListener("click",clearFilters)
+
 
 
 let products = [
@@ -29,7 +29,8 @@ let products = [
         list2:"Accurate",
         list3:"Does the job",
         stars:4,
-        author: `<a class="credit" href="https://commons.wikimedia.org/wiki/File:Vpass-1.JPG">Svjo</a>`,
+        ratings:6,
+        author: `<a class="" href="https://commons.wikimedia.org/wiki/File:Vpass-1.JPG">Svjo</a>`,
         src:"img/vattenpass/vpass-1.JPG"
     },
     {
@@ -40,7 +41,8 @@ let products = [
         list2:"Compact",
         list3:"Always with you",
         stars:4,
-        author: `<a class="credit" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280810/">Walter Bichler</a>`,
+        ratings:9,
+        author: `<a class="" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280810/">Walter Bichler</a>`,
         src:"img/vattenpass/vpass-2.JPG"
     },
     {
@@ -51,7 +53,8 @@ let products = [
         list2:"Simple",
         list3:"Compact",
         stars:1,
-        author: `<a class="credit" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280811/">Walter Bichler</a>`,
+        ratings:1,
+        author: `<a class="" href="https://pixabay.com/photos/spirit-level-tool-red-cord-balance-280811/">Walter Bichler</a>`,
         src:"img/vattenpass/vpass-3.JPG"
     },
     {
@@ -62,7 +65,8 @@ let products = [
         list2:"Can store fish",
         list3:"Fish not included",
         stars:2,
-        author: `<a class="credit" href="https://pixabay.com/photos/craft-spirit-level-miniature-figures-3838891/">Wilfried Pohnke</a>`,
+        ratings:64,
+        author: `<a class="" href="https://pixabay.com/photos/craft-spirit-level-miniature-figures-3838891/">Wilfried Pohnke</a>`,
         src:"img/vattenpass/vpass-4.JPG"
     },
     {
@@ -73,7 +77,8 @@ let products = [
         list2:"Useful",
         list3:"Reliable",
         stars:3,
-        author: `<a class="credit" href="https://www.pexels.com/photo/bearded-man-holding-a-yellow-spirit-level-8482816/">Thirdman</a>`,
+        ratings:76,
+        author: `<a class="" href="https://www.pexels.com/photo/bearded-man-holding-a-yellow-spirit-level-8482816/">Thirdman</a>`,
         src:"img/vattenpass/vpass-5.JPG"
     },
     {
@@ -84,7 +89,8 @@ let products = [
         list2:"Lasts you a life time",
         list3:"Never fails",
         stars:5,
-        author: `<a class="credit" href="https://www.pexels.com/photo/person-holding-a-spirit-level-8488008/">Kindel Media</a>`,
+        ratings:67,
+        author: `<a class="" href="https://www.pexels.com/photo/person-holding-a-spirit-level-8488008/">Kindel Media</a>`,
         src:"img/vattenpass/vpass-6.JPG"
     },
     {
@@ -95,7 +101,8 @@ let products = [
         list2:"Blends in",
         list3:"Simple",
         stars:2,
-        author: `<a class="credit" href="https://www.pexels.com/photo/an-engineer-holding-a-spirit-level-against-a-wall-8482824/">Thirdman</a>`,
+        ratings:8,
+        author: `<a class="" href="https://www.pexels.com/photo/an-engineer-holding-a-spirit-level-against-a-wall-8482824/">Thirdman</a>`,
         src:"img/vattenpass/vpass-7.JPG"
     },
     {
@@ -106,10 +113,17 @@ let products = [
         list2:"Always handy",
         list3:"Durable",
         stars:4,
-        author: `<a class="credit" href="https://unsplash.com/photos/white-spirit-level-on-brown-table-_qpY2jqedwU">Louis Hansel</a>`,
+        ratings:93,
+        author: `<a class="" href="https://unsplash.com/photos/white-spirit-level-on-brown-table-_qpY2jqedwU">Louis Hansel</a>`,
         src:"img/vattenpass/vpass-8.JPG"
     }
 ]
+
+function toggleMenu(){
+  alert("huh")
+  let menu = document.getElementById("menu-button")
+  menu.classList.toggle("show")
+}
 
 function createProducts(item){
     
@@ -124,31 +138,33 @@ function createProducts(item){
         let thing1 = item.list1
         let thing2 = item.list2
         let thing3 = item.list3
+        let ratings = item.ratings
 
         let product = document.createElement("article")
         product.classList.add("product")
         let stringOfStars = ``
+        
         for (let i = 0; i < stars; i++){
-            stringOfStars += `<img class="fullstar" src="img/star.png" alt="${stars} out of 5"></img>`
+            stringOfStars += `<img class="fullstar" src="img/star.png">`
 
         }
         product.innerHTML = ` 
         <img class="display" src="${src}" alt="A picture of a spirit level">
-        <h6 class="galindo-regular credit">Author ${author}</h6>
-        <h1 class="galindo-regular">${name}</h1>
-        <div class="fullstar">
+        <h6 class="credit">Author ${author}</h6>
+        <h1 class="prname">${name}</h1>
+        <div class="stars" alt="${stars} out of 5"></img>
           ${stringOfStars}
+          <h6 class="ratings">(${ratings})</h6>
         </div>
       
-      <li class="galindo-regular">
+      <li class="">
         <ul><img class="listarrow" src="img/listarrow.png" alt="List 1">${thing1}</ul>
         <ul><img class="listarrow" src="img/listarrow.png" alt="List 2">${thing2}</ul>
         <ul><img class="listarrow" src="img/listarrow.png" alt="List 3">${thing3}</ul>
       </li>
-      <h2 class="galindo-regular">${price}.-</h2>
+      <h2 class="price">${price}.-</h2>
       <div class="addToCart" data-id="${id}">
-        <img class="addcart" src="img/addcart.png" alt="Add to cart">
-        <img class="circle" src="img/circle.png" alt="">
+        <img class="addcart" src="img/addcartbutton.png" alt="Add to cart">
       </div>
        `
        mn.appendChild(product);
@@ -161,28 +177,44 @@ for (let i = 0; i < products.length; i++){
     createProducts(item)
 }
 
-
-function toggleMenu(){
-    let menu = document.querySelector("#menu")
-    menu.classList.toggle("show")
+function updateStarsText() {
+  stars.textContent = "Minimum stars: " + starslider.value
 }
 
-starslider.oninput = function(){
-    stars.textContent = "Minimum stars: " + this.value
+function updateMinPriceText() {
+  minPrice.textContent = "Minimum price: " + minPriceSlider.value + "kr"
 }
 
-minPriceSlider.oninput = function(){
-    minPrice.textContent = "Minium price: " + this.value + "kr"
+function updateMaxPriceText() {
+  maxPrice.textContent = "Maximum price: " + maxPriceSlider.value + "kr"
 }
 
-maxPriceSlider.oninput = function(){
-    maxPrice.textContent = "Maximum price: " + this.value + "kr"
+function updateMaxWidthText() {
+  maxWidth.textContent = "Maximum Width: " + maxWidthSlider.value + "m"
 }
-maxLengthSlider.oninput = function(){
-    maxLength.textContent = "Maximum length: " + this.value + "cm"
+
+function updateMaxLengthText() {
+  maxLength.textContent = "Maximum length: " + maxLengthSlider.value + "m"
 }
-maxWidthSlider.oninput = function(){
-    maxWidth.textContent = "Maximum Width: " + this.value + "cm"
+
+starslider.oninput = updateStarsText
+minPriceSlider.oninput = updateMinPriceText
+maxPriceSlider.oninput = updateMaxPriceText
+maxWidthSlider.oninput = updateMaxWidthText
+maxLengthSlider.oninput = updateMaxLengthText
+
+function clearFilters() {
+  starslider.value = 0
+  minPriceSlider.value = 0
+  maxPriceSlider.value = 10000
+  maxWidthSlider.value = 100
+  maxLengthSlider.value = 100
+
+  updateStarsText()
+  updateMinPriceText()
+  updateMaxPriceText()
+  updateMaxWidthText()
+  updateMaxLengthText()
 }
 
 function getCookies() {
