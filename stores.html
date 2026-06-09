@@ -12,12 +12,14 @@
         <a href="index.html" id="logoa">
             <img id="logo" src="img/loga.png" alt="">
         </a>
-        <img id="menu-button" src="img/menu.png" alt="">
+        <div id="menu-div">
+            <img id="menu-button" src="img/menu.png" alt="">
+        </div>
         <section id="container">
-        <a href="stores.html">Our Stores!</a>
-        <a href="contact.html">Contact Us!</a>
-        <a href="">Why us?</a>
-        <a href="">Deals!</a>
+            <a id="selected" href="stores.html">Our Stores!</a>
+            <a href="contact.html">Contact Us!</a>
+            <a href="whyus.html">Why us?</a>
+            <a href="">Deals!</a>
         </section>
 
         <input id="search" type="search" placeholder="Search products">
@@ -28,7 +30,15 @@
         
     </nav>
     <section id="banner"></section>
-
+    <nav id="menu">
+    <img id="close-menu" src="img/close.png" alt="Close menu">
+    <a href="index.html">Shopping!</a>
+    <a href="stores.html">Our Stores!</a>
+      <a href="contact.html">Contact Us!</a>
+      <a href="whyus.html">Why us?</a>
+      <a href="">Deals!</a>
+  </nav>  
+  <div id="fade-layer"></div>
     <main>
         <article>
             <img class="display" src="img/affar/affar1.jpg" alt="">
@@ -60,5 +70,6 @@
         <h6 class="fineprint "> * If something breaks, try turning your expectations off and on again.</h6>
         <h6 class="fineprint "> * In case of emergency, please remain calm and pretend this is intentional.</h6>
     </footer>
+    <script src="js/menu.js"></script> 
 </body>
 </html>

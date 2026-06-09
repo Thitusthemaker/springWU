@@ -1,6 +1,5 @@
 
-// var menubutton = document.getElementById("menu-button").addEventListener("click",toggleMenu)
-// var closebutton = document.getElementById("close-menu").addEventListener("click",toggleMenu)
+
 
 var starslider = document.getElementById("starsSlider")
 const stars = document.getElementById("stars")
@@ -117,14 +116,11 @@ let products = [
         ratings:93,
         author: `<a class="" href="https://unsplash.com/photos/white-spirit-level-on-brown-table-_qpY2jqedwU">Louis Hansel</a>`,
         src:"img/vattenpass/vpass-8.JPG"
-    }
+    },
+    
 ]
 
-function toggleMenu(){
-  console.log("menu click")
-  let menu = document.getElementById("menu")
-  menu.classList.toggle("show")
-}
+
 
 function createProducts(item){
     
@@ -146,14 +142,14 @@ function createProducts(item){
         let stringOfStars = ``
         
         for (let i = 0; i < stars; i++){
-            stringOfStars += `<img class="fullstar" src="img/star.png">`
+            stringOfStars += `<img class="fullstar" src="img/star.png" alt="${stars} out of 5">`
 
         }
         product.innerHTML = ` 
         <img class="display" src="${src}" alt="A picture of a spirit level">
         <h6 class="credit">Author ${author}</h6>
         <h1 class="prname">${name}</h1>
-        <div class="stars" alt="${stars} out of 5"></img>
+        <div class="stars"></img>
           ${stringOfStars}
           <h6 class="ratings">(${ratings})</h6>
         </div>

@@ -13,10 +13,12 @@
 </head>
 <body id="home">
   <nav id="header">
-    <a href="index.html" id="logoa">
-      <img id="logo" src="img/loga.png" alt="">
+    <a href="index.html" id="logoa" aria-label="Shopping page">
+      <img id="logo" src="img/loga.png" alt="Tangentens lutning">
     </a>
-    <img id="menu-button" src="img/menu.png" alt="">
+    <div id="menu-div">
+      <img id="menu-button" src="img/menu.png" alt="">
+    </div>
     <section id="container">
       <a href="stores.html">Our Stores!</a>
       <a href="contact.html">Contact Us!</a>
@@ -34,8 +36,13 @@
   </nav>
   <nav id="menu">
     <img id="close-menu" src="img/close.png" alt="Close menu">
-
+    <a href="index.html">Shopping!</a>
+    <a href="stores.html">Our Stores!</a>
+      <a href="contact.html">Contact Us!</a>
+      <a href="whyus.html">Why us?</a>
+      <a href="">Deals!</a>
   </nav>  
+  <div id="fade-layer"></div>
 
   <section id="banner"></section>
 
@@ -47,36 +54,36 @@
     <h3 class="filter" id="clearFilters">Clear All</h3>
     <h3 class="filter" id="stars">Minimum stars: 0</h3>
     <div class="slidecontainer">
-      <label for="Adjust minimum stars" aria-label="Adjust minimum stars">
-      <input type="range" min="0" max="5" step="0.5" value="0" class="slider" id="starsSlider">
+      <!-- <label for="Adjust minimum stars" aria-label="Adjust minimum stars"> -->
+      <input type="range" min="0" max="5" step="0.5" value="0" class="slider" id="starsSlider" aria-label="Adjust minimum stars">
       </label>
     </div>
 
     <h3 class="filter" id="minPrice">Minium price: 0kr</h3>
     <div class="slidecontainer">
-      <label for="Adjust minimum price"aria-label="Adjust minimum price">
-      <input type="range" min="0" max="10000" step="100" value="0" class="slider" id="minPriceSlider">
+      <!-- <label for="Adjust minimum price"aria-label="Adjust minimum price"> -->
+      <input type="range" min="0" max="10000" step="100" value="0" class="slider" id="minPriceSlider" aria-label="Adjust minimum price">
       </label>
     </div>
 
     <h3 class="filter" id="maxPrice">Maximum price: 10000kr</h3>
     <div class="slidecontainer">
-      <label for="Adjust maximum price" aria-label="Adjust maximum price">
-      <input type="range" min="100" max="10000" step="100" value="10000" class="slider" id="maxPriceSlider">
+      <!-- <label for="Adjust maximum price" aria-label="Adjust maximum price"> -->
+      <input type="range" min="100" max="10000" step="100" value="10000" class="slider" id="maxPriceSlider" aria-label="Adjust maximum price">
       </label>
     </div>
     
     <h3 class="filter" id="maxWidth">Max width: 100m</h3>
     <div class="slidecontainer">
-      <label for="Adjust max width" aria-label="Adjust max width">
-      <input type="range" min="1" max="100" step="1" value="100" class="slider" id="maxWidthSlider">
+      <!-- <label for="Adjust max width" aria-label="Adjust max width"> -->
+      <input type="range" min="1" max="100" step="1" value="100" class="slider" id="maxWidthSlider" aria-label="Adjust maximum width">
       </label>
     </div>
 
     <h3 class="filter" id="maxLength">Max length: 100m</h3>
     <div class="slidecontainer">
-      <label for="Adjust max length" aria-label="Adjust max length">
-      <input type="range" min="1" max="100" step="1" value="100" class="slider" id="maxLengthSlider">
+      <!-- <label for="Adjust max length" aria-label="Adjust max length"> -->
+      <input type="range" min="1" max="100" step="1" value="100" class="slider" id="maxLengthSlider" aria-label="Adjust maximum length">
     </label>
     </div>
     
@@ -90,6 +97,7 @@
   </footer>
 
   <script src="js/script1.js"></script> 
+  <script src="js/menu.js"></script> 
 
 </body>
 </html>
